@@ -2,7 +2,10 @@ import React from "react"
 
 exports.onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
   if (process.env.NODE_ENV === `production`) {
-    const versionSuffix = pluginOptions.version && pluginOptions.version === 2 ? '2' : '';
+    // useBeta flag is set for metrika 2.0
+    const useBeta = pluginOptions.version && pluginOptions.version === 2;
+    const versionSuffix = useBeta ? '2' : '';
+    const metrikaSrc = `https://mc.yandex.ru/metrika/${useBeta ? 'tag' : 'watch'}.js`;
 
     return setPostBodyComponents([
       <script
@@ -28,7 +31,7 @@ exports.onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
         f = function () { n.parentNode.insertBefore(s, n); };
     s.type = "text/javascript";
     s.async = true;
-    s.src = "https://mc.yandex.ru/metrika/watch.js";
+    s.src = "${metrikaSrc}";
 
     if (w.opera == "[object Opera]") {
         d.addEventListener("DOMContentLoaded", f, false);
