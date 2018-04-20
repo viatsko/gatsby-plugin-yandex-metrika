@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-yandex-metrika",
   "description": "Gatsby plugin to add yandex metrika onto a site",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Valerii Iatsko <viatsko@viatsko.me>",
   "devDependencies": {
     "babel-cli": "^6.24.1",
