@@ -8,12 +8,13 @@
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "cross-env": "^5.1.4"
+    "cross-env": "^5.1.4",
+    "react": "^15.6.1"
   },
   "keywords": [
     "gatsby",
     "gatsby-plugin",
-    "yandex matrika"
+    "yandex metrika"
   ],
   "license": "MIT",
   "main": "index.js",
@@ -22,10 +23,7 @@
     "watch": "babel -w src --out-dir . --ignore __tests__",
     "prepublish": "cross-env NODE_ENV=production npm run build"
   },
-  "dependencies": {
-    "react": "^15.6.1"
-  },
   "peerDependencies": {
-    "gatsby": "^1.0.0"
+    "gatsby": "^1.0.0 || >2.0.0-alpha"
   }
 }
