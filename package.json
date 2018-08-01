@@ -13,7 +13,7 @@
   "keywords": [
     "gatsby",
     "gatsby-plugin",
-    "yandex matrika"
+    "yandex metrika"
   ],
   "license": "MIT",
   "main": "index.js",
