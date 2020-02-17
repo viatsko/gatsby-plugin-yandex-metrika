@@ -1,10 +1,10 @@
-exports.onRouteUpdate = function({ location }) {
+exports.onRouteUpdate = function({ location }, pluginOptions) {
   // Don't track while developing.
   if (
     process.env.NODE_ENV === `production` &&
-    typeof window.yaCounter !== `undefined` &&
-    typeof window.yaCounter.hit === 'function'
+    typeof window.ym !== `undefined` &&
+    typeof window.ym.hit === 'function'
   ) {
-    window.yaCounter.hit((location || {}).pathname);
+    window.ym(pluginOptions.trackingId, 'hit', (location || {}).pathname);
   }
 }

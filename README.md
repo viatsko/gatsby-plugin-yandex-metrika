@@ -21,9 +21,9 @@ plugins: [
 ]
 ```
 
-## WebVisor 2.0
+## CDN option
 
-If you want to use WebVisor 2.0 (beta), specify `version: 2` in `gatsby-config.js` file:
+Option 'useCDN' allows to count visits from regions, where access to Yandex resources is limited. Using altetnative CDN address may decrease counter's code loading.
 
 ```javascript
 // In your gatsby-config.js
@@ -34,7 +34,7 @@ plugins: [
       trackingId: 'YOUR_YANDEX_METRIKA_TRACKING_ID',
       webvisor: true,
       trackHash: true,
-      version: 2,
+      useCDN: true,
     },
   },
 ]
