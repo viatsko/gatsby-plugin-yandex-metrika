@@ -5,7 +5,7 @@ exports.onRouteUpdate = function({ location }, pluginOptions) {
     typeof window.ym !== `undefined` &&
     location
   ) {
-    const { pathname, search } = location;
-    window.ym(pluginOptions.trackingId, 'hit', pathname + search);
+    const { pathname, search, hash } = location;
+    window.ym(pluginOptions.trackingId, "hit", pathname + search + hash);
   }
 }
